@@ -236,6 +236,7 @@ static char codec_name[SND_ACPI_I2C_ID_LEN];
 
 static int snd_byt_cht_es8316_mc_probe(struct platform_device *pdev)
 {
+	static const char * const mic_name[] = { "in1", "in2" };
 	struct byt_cht_es8316_private *priv;
 	struct snd_soc_acpi_mach *mach;
 	const char *i2c_name = NULL;
